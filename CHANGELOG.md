@@ -2,15 +2,8 @@
 
 ## Pending
 
-- [Rust] Deny unsafe code in minify-html crate.
-- BREAKING: Cfg options have changed such that spec compliance is the default, to avoid confusion with users:
-  - `do_not_minify_doctype` => `minify_doctype`
-  - `ensure_spec_compliant_unquoted_attribute_values` => `allow_noncompliant_unquoted_attribute_values`
-  - `keep_spaces_between_attributes` => `allow_removing_spaces_between_attributes`
-  - `Cfg::spec_compliant()` => `Cfg::enable_possibly_noncompliant(&mut self)`
-- BREAKING: Some entity minifications are now classified as "possibly noncompliant" and can be enabled via the `allow_optimal_entities` option but won't be performed by default.
-- [Internal] Migrate to [aHash](https://github.com/tkaitchuck/aHash/blob/master/compare/readme.md) for faster more consistent performance and once_cell for modern ergonomics.
-- [Node.js] Fix ARM64 package metadata.
+## 0.16.0
+
 - [Python] Add Python 3.13 support.
 
 ## 0.15.0
