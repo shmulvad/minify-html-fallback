@@ -7,9 +7,9 @@ members = [
   "minhtml",
   "minify-html-common",
   "minify-html-onepass-python",
-  "minify-html-onepass",
+  "minify-html-onepass-fallback",
   "minify-html-python",
-  "minify-html",
+  "minify-html-fallback",
 ]
 
 [profile.release]

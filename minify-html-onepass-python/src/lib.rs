@@ -1,6 +1,6 @@
-use ::minify_html_onepass::in_place as minify_html_native;
-use ::minify_html_onepass::Cfg;
-use ::minify_html_onepass::Error;
+use ::minify_html_onepass_fallback::in_place as minify_html_native;
+use ::minify_html_onepass_fallback::Cfg;
+use ::minify_html_onepass_fallback::Error;
 use pyo3::exceptions::PySyntaxError;
 use pyo3::prelude::*;
 use pyo3::wrap_pyfunction;

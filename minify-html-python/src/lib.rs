@@ -1,5 +1,5 @@
-use ::minify_html::minify as minify_html_native;
-use ::minify_html::Cfg;
+use ::minify_html_fallback::minify as minify_html_native;
+use ::minify_html_fallback::Cfg;
 use pyo3::prelude::*;
 use pyo3::wrap_pyfunction;
 use std::string::String;

@@ -1,12 +1,12 @@
 [package]
 publish = false
-name = "minify-html-python"
+name = "minify-html-python-fallback"
 description = "Extremely fast and smart HTML + JS + CSS minifier"
 license = "MIT"
 homepage = "https://github.com/wilsonzlin/minify-html"
 readme = "README.md"
 repository = "https://github.com/wilsonzlin/minify-html.git"
-version = "0.16.0"
+version = "0.16.1"
 authors = ["Wilson Lin <code@wilsonl.in>"]
 edition = "2018"
 
@@ -14,7 +14,7 @@ edition = "2018"
 crate-type = ["cdylib"]
 
 [dependencies]
-minify-html = { path = "../minify-html" }
+minify-html-fallback = { path = "../minify-html-fallback" }
 [dependencies.pyo3]
 version = "0.22.5"
 features = ["extension-module", "generate-import-lib"]
