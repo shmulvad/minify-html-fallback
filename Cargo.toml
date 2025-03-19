@@ -6,13 +6,9 @@ members = [
   "debug/diff/charlines",
   "minhtml",
   "minify-html-common",
-  "minify-html-java",
-  "minify-html-nodejs",
   "minify-html-onepass-python",
   "minify-html-onepass",
   "minify-html-python",
-  "minify-html-ruby/ext/minify_html",
-  "minify-html-wasm",
   "minify-html",
 ]
 

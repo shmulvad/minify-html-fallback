@@ -29,10 +29,6 @@ jobs:
         variant: ['', '-onepass']
         target: [x86_64, aarch64]
         python:
-        - '3.8'
-        - '3.9'
-        - '3.10'
-        - '3.11'
         - '3.12'
         - '3.13'
         exclude:
@@ -47,7 +43,7 @@ jobs:
         run: |
           # Maturin uses Cargo.toml name for Python name: https://www.maturin.rs/#usage.
           # We edit it here instead of just updating our repo code as Cargo workspace names must be different.
-          newName=minify-html${{ matrix.variant }}
+          newName=minify-html${{ matrix.variant }}-fallback
           newName=${newName//-/_}
           sed -i.bak 's%^name = ".*$%name = "'$newName'"%' ./minify-html${{ matrix.variant }}-python/Cargo.toml
           rm ./minify-html${{ matrix.variant }}-python/Cargo.toml.bak

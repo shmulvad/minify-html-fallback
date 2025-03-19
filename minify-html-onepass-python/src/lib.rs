@@ -6,7 +6,8 @@ use pyo3::prelude::*;
 use pyo3::wrap_pyfunction;
 use std::str::from_utf8_unchecked;
 
-#[pyfunction(py_args = "*", minify_js = "false", minify_css = "false")]
+#[pyfunction]
+#[pyo3(signature = (code, minify_js = false, minify_css = false))]
 fn minify(code: String, minify_js: bool, minify_css: bool) -> PyResult<String> {
   let mut code = code.into_bytes();
   match minify_html_native(&mut code, &Cfg {
@@ -26,8 +27,6 @@ fn minify(code: String, minify_js: bool, minify_css: bool) -> PyResult<String> {
 }
 
 #[pymodule]
-fn minify_html_onepass(_py: Python, m: &PyModule) -> PyResult<()> {
-  m.add_wrapped(wrap_pyfunction!(minify))?;
-
-  Ok(())
+fn minify_html_onepass(m: &Bound<'_, PyModule>) -> PyResult<()> {
+  m.add_function(wrap_pyfunction!(minify, m)?)
 }
