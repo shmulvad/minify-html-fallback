@@ -27,6 +27,6 @@ fn minify(code: String, minify_js: bool, minify_css: bool) -> PyResult<String> {
 }
 
 #[pymodule]
-fn minify_html_onepass(m: &Bound<'_, PyModule>) -> PyResult<()> {
+fn minify_html_onepass_fallback(m: &Bound<'_, PyModule>) -> PyResult<()> {
   m.add_function(wrap_pyfunction!(minify, m)?)
 }

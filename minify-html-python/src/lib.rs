@@ -64,6 +64,6 @@ fn minify(
 }
 
 #[pymodule]
-fn minify_html(m: &Bound<'_, PyModule>) -> PyResult<()> {
+fn minify_html_fallback(m: &Bound<'_, PyModule>) -> PyResult<()> {
   m.add_function(wrap_pyfunction!(minify, m)?)
 }
