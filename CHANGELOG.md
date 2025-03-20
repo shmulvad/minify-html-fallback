@@ -2,7 +2,7 @@
 
 ## Pending
 
-## 0.16.3
+## 0.16.4
 
 - [Python] Add Python 3.13 support.
 
